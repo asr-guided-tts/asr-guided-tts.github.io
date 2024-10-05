@@ -1,10 +1,10 @@
 function createAudioHTML(path, flat) {
   if (flat) {
-    return '<audio controls controlslist="nodownload" class="px-1" style="width: 36vw;"> <source src=' +
+    return '<audio controls controlslist="nodownload" class="px-2" style="width: 36vw;"> <source src=' +
         path +
         ' type="audio/wav">Your browser does not support the audio element.</audio>';
   }
-  return '<audio controls controlslist="nodownload" class="px-1"> <source src=' +
+  return '<audio controls controlslist="nodownload" class="px-2"> <source src=' +
       path +
       ' type="audio/wav">Your browser does not support the audio element.</audio>';
 }
@@ -21,7 +21,7 @@ function generate_number_of_asr_models_table(tableId, uttids, page) {
     let row = table.insertRow(i % numPerPage + 1);
     row.style.height = '80px';
     if (i < uttids.length) {
-      cell = row.insertCell(1);
+      cell = row.insertCell(0);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/enroll.wav', false);
       cell.style.textAlign = "center";
 
@@ -71,7 +71,7 @@ function generate_target_speech_length_table(tableId, uttids, page) {
     let row = table.insertRow(i % numPerPage + 1);
     row.style.height = '80px';
     if (i < uttids.length) {
-      cell = row.insertCell(1);
+      cell = row.insertCell(0);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/enroll.wav', false);
       cell.style.textAlign = "center";
 
