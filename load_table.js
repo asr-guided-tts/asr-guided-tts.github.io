@@ -26,19 +26,15 @@ function generate_guidance_models_table(tableId, uttids, page) {
       cell.style.textAlign = "center";
 
       cell = row.insertCell(1);
-      cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/gt.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(2);
-      cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/spk_6.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/all.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(4);
+      cell = row.insertCell(2);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/spk_all.wav', false);
+      cell.style.textAlign = "center";
+
+      cell = row.insertCell(3);
+      cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/gt.wav', false);
       cell.style.textAlign = "center";
     } else {
       let cell = row.insertCell(0);
@@ -50,9 +46,6 @@ function generate_guidance_models_table(tableId, uttids, page) {
       cell.innerHTML = '<br>';
       cell.style.textAlign = "center";
       cell = row.insertCell(3);
-      cell.innerHTML = '<br>';
-      cell.style.textAlign = "center";
-      cell = row.insertCell(4);
       cell.innerHTML = '<br>';
       cell.style.textAlign = "center";
     }
@@ -72,30 +65,26 @@ function generate_target_speech_length_table(tableId, uttids, page) {
     row.style.height = '80px';
     if (i < uttids.length) {
       cell = row.insertCell(0);
-      cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/enroll.wav', false);
-      cell.style.textAlign = "center";
-
-      cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/gt.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(2);
+      cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/length0.9.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(3);
+      cell = row.insertCell(2);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/length1.0.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(4);
+      cell = row.insertCell(3);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/length1.1.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(5);
+      cell = row.insertCell(4);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/length1.2.wav', false);
       cell.style.textAlign = "center";
 
-      cell = row.insertCell(6);
+      cell = row.insertCell(5);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/length1.3.wav', false);
       cell.style.textAlign = "center";
 
@@ -131,10 +120,8 @@ function generate_target_speech_length_table(tableId, uttids, page) {
 
 
 uttids_for_guidance_models = ["1089_134691_000039_000001", "121_121726_000020_000001", "1320_122612_000035_000003", "1580_141083_000010_000002", "1580_141083_000018_000000", "1580_141084_000068_000000", "1995_1826_000030_000002", "1995_1836_000007_000001", "3570_5694_000011_000001", "3570_5695_000002_000004", "4446_2271_000007_000004"]
-uttids_for_target_speech_length = ["1089_134691_000039_000001", "121_121726_000020_000001", "1320_122612_000035_000003", "1580_141083_000010_000002", "1580_141083_000018_000000", "1580_141084_000068_000000", "1995_1826_000030_000002", "1995_1836_000007_000001", "3570_5694_000011_000001", "3570_5695_000002_000004", "4446_2271_000007_000004"]
 
 generate_guidance_models_table('guidance_models', uttids_for_guidance_models, 1);
-generate_target_speech_length_table('target_speech_length', uttids_for_target_speech_length, 1);
 
 $(document).ready(function() {
   for (let i = 1; i <= 3; i++) {
@@ -151,6 +138,9 @@ $(document).ready(function() {
 });
 
 
+/*
+uttids_for_target_speech_length = ["1089_134691_000039_000001", "121_121726_000020_000001", "1320_122612_000035_000003", "1580_141083_000010_000002", "1580_141083_000018_000000", "1580_141084_000068_000000", "1995_1826_000030_000002", "1995_1836_000007_000001", "3570_5694_000011_000001", "3570_5695_000002_000004", "4446_2271_000007_000004"]
+generate_target_speech_length_table('target_speech_length', uttids_for_target_speech_length, 1);
 $(document).ready(function() {
   for (let i = 1; i <= 3; i++) {
     let id = '#target_speech_length-' + i;
@@ -164,3 +154,4 @@ $(document).ready(function() {
     });
   }
 });
+*/
