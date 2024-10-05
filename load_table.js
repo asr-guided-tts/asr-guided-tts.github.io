@@ -20,7 +20,7 @@ function generate_number_of_asr_models_table(tableId, uttids, page) {
   for (let i = (page - 1) * numPerPage; i < end_idx; i++) {
     let row = table.insertRow(i % numPerPage + 1);
     row.style.height = '80px';
-    if (i < ref_names.length) {
+    if (i < uttids.length) {
       cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/enroll.wav', false);
       cell.style.textAlign = "center";
@@ -70,7 +70,7 @@ function generate_target_speech_length_table(tableId, uttids, page) {
   for (let i = (page - 1) * numPerPage; i < end_idx; i++) {
     let row = table.insertRow(i % numPerPage + 1);
     row.style.height = '80px';
-    if (i < ref_names.length) {
+    if (i < uttids.length) {
       cell = row.insertCell(1);
       cell.innerHTML = createAudioHTML(tableId + "/" + uttids[i] + '/enroll.wav', false);
       cell.style.textAlign = "center";
