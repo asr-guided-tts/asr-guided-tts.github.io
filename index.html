@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ICL-VC Demo Page</title>
+    <title>TTS Guided by ASR Demo Page</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -220,9 +220,6 @@
           <li class="page-item">
             <a id="number_of_asr_models-3" class="page-link" href="#">3</a>
           </li>
-          <li class="page-item">
-            <a id="number_of_asr_models-4" class="page-link" href="#">4</a>
-          </li>
         </ul>
         <table class="table pt-2" id="number_of_asr_models">
           <thead>
@@ -241,8 +238,51 @@
     </div>
     </div>
 
+    <div class="content">
+      <h2 style="text-align: center;">Target Speech Length Samples</h2>
+      <div style="text-align: justify;">
+      <body>
+        <div style="text-align: justify;">
+            TBD
+        </div>
+      </body>
+      <HR>
+    </div>
+    <div style="margin-top: 0vh; text-align: center;">
+      <div class="table-responsive pt-3">
+        <ul class="pagination justify-content-center">
+          <li class="page-item active">
+            <a id="target_speech_length-1" class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a id="target_speech_length-2" class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a id="target_speech_length-3" class="page-link" href="#">3</a>
+          </li>
+        </ul>
+        <table class="table pt-2" id="number_of_asr_models">
+          <thead>
+            <tr>
+              <!-- <th>Text</th> -->
+              <th style="text-align: center;">Enroll Speech</th>
+              <th style="text-align: center;">Reference Speech</th>
+              <th style="text-align: center">0.9</th>
+              <th style="text-align: center">1.0</th>
+              <th style="text-align: center">1.1</th>
+              <th style="text-align: center">1.2</th>
+              <th style="text-align: center">1.3</th>
+              <th style="text-align: center">1.5</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+
   <p style="text-align: center;">
-    <img src="picture/wer_length.pdf" style="width: 60vw; margin-left: 0vw;">
+    <img src="picture/wer_length.png" style="width: 60vw; margin-left: 0vw;">
   </p>
   </body>
 
