@@ -153,7 +153,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   for (let i = 1; i <= 3; i++) {
-    let id = '#target_speech_length' + i;
+    let id = '#target_speech_length-' + i;
     $(id).click(function() {
       generate_target_speech_length_table(
           'target_speech_length',
